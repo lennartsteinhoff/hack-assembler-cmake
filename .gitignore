@@ -1,4 +1,5 @@
+.*
 CMakeChache.txt
-googletest
-build
-CMakeFiles
+googletest/
+build/
+CMakeFiles/
