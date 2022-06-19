@@ -1,5 +1,0 @@
-add_test([=[SymboltableTest.BasicAssertions]=]  /Users/workspace/Desktop/nand2tetris/mytools/hack-assembler-cmake/build/test/symboltest [==[--gtest_filter=SymboltableTest.BasicAssertions]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SymboltableTest.BasicAssertions]=]  PROPERTIES WORKING_DIRECTORY /Users/workspace/Desktop/nand2tetris/mytools/hack-assembler-cmake/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[SymboltableTest.HasDefaultLabels]=]  /Users/workspace/Desktop/nand2tetris/mytools/hack-assembler-cmake/build/test/symboltest [==[--gtest_filter=SymboltableTest.HasDefaultLabels]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[SymboltableTest.HasDefaultLabels]=]  PROPERTIES WORKING_DIRECTORY /Users/workspace/Desktop/nand2tetris/mytools/hack-assembler-cmake/build/test SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  symboltest_TESTS SymboltableTest.BasicAssertions SymboltableTest.HasDefaultLabels)

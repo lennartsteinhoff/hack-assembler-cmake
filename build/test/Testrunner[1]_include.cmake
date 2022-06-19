@@ -1,5 +1,0 @@
-if(EXISTS "/Users/workspace/Desktop/nand2tetris/mytools/hack-assembler-cmake/build/test/Testrunner[1]_tests.cmake")
-  include("/Users/workspace/Desktop/nand2tetris/mytools/hack-assembler-cmake/build/test/Testrunner[1]_tests.cmake")
-else()
-  add_test(Testrunner_NOT_BUILT Testrunner_NOT_BUILT)
-endif()
