@@ -1,0 +1,5 @@
+if(EXISTS "/Users/workspace/Desktop/nand2tetris/mytools/hack-assembler-cmake/build/test/parsertest[1]_tests.cmake")
+  include("/Users/workspace/Desktop/nand2tetris/mytools/hack-assembler-cmake/build/test/parsertest[1]_tests.cmake")
+else()
+  add_test(parsertest_NOT_BUILT parsertest_NOT_BUILT)
+endif()
