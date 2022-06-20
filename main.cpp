@@ -8,16 +8,12 @@
 
 using namespace std;
 
+constexpr int MAX_HACK_ADDRESS = 32768-1;
+
 class Conversions {
 	public:
 		static string convertStringTo15BitInt(int n) {
-			if (n >= (2^15-1)) throw "Integer or Address out of range";
-			std::string ns = std::bitset<15>(n).to_string();
-			return ns;
-		}
-		static string convertStringTo15BitString(string s) {
-			int n = std::stoi(s);
-			if (n >= (2^15-1)) throw "Integer or Address out of range";
+			if (n > MAX_HACK_ADDRESS) throw "Integer or Address out of range";
 			std::string ns = std::bitset<15>(n).to_string();
 			return ns;
 		}
@@ -89,7 +85,6 @@ int main(int argc, char *argv[])
 		parser.advance();
 		cout << parser << "\t \t \t";
 		if (parser.commandType() == Parser::CommandType::C_COMMAND) {
-			//cout << "111" << parser.comp() << "" << parser.dest() << "" << parser.jump() << endl;
 			cout << "111" << code.comp(parser.comp()) << "" << code.dest(parser.dest()) << "" << code.jump(parser.jump())<< endl;
 		}
 
@@ -101,10 +96,10 @@ int main(int argc, char *argv[])
 					symboltable.addEntry(parser.symbol(), RAM);
 					RAM++;
 				}
-				cout << Conversions::convertStringTo15BitInt(symboltable.getAddress(parser.symbol()));
+				cout << Conversions::convertStringTo15BitInt(symboltable.getAddress(parser.symbol())) ;
 				
 			} else {
-				cout << Conversions::convertStringTo15BitString(parser.symbol());
+				cout << Conversions::convertStringTo15BitInt(std::stoi(parser.symbol()));
 			}
 			cout << endl;
 		}
